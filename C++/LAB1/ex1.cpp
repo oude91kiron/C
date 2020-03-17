@@ -5,32 +5,38 @@
 7 8 9 10
 */
 
-#include <iostream> // input/output strem
+#include <iostream> // input/output stream library
 
-using namespace std;
+
+using namespace std;   // means that we can use names for objects and variables from the standard library.
 
 int main()
 {
-    int space=3;
+    int spc=4;
     int val=1;
-    int rows=4;
+    int rows=5;
 
-    for(int i=1;i<=rows;i++)
+    for(int i=0;i<rows;i++)
     {
-        for(int s=1;s<=space;s++)
+        for(int j=0; j<spc;j++){ // print 4 space at the first line
             cout<<" ";
+        }
+        spc--;  // decrease spaces number by 1
 
-        space--;
 
-
-        for(int n=1;n<=i;n++)
+        for(int n=0; n<i; n++) // print the first value "1" followed by space
         {
             cout<<val<<" ";
-            val++;
+            val++; // update the value every time after printing it
         }
 
-
-        cout<<"\n";
+        // val++; // update the value every new line so the result would be (replace the spaces with * just for debugging your code )
+        // ****
+        // ***2*
+        // **3*3*
+        // *4*4*4*
+        // 5*5*5*5*
+        cout<<"\n"; // start new line.
     }
 
 
